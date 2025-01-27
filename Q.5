@@ -38,11 +38,15 @@ int main ()
         arr[i++] = ptr->data;
         ptr = ptr->next;
     }
-    free(ptr);
+    
     printf("Converted Linked List to Array\n");
     for(int j=0;j<4;j++)
     {
         printf("%d ",arr[j]);
     }
+	free(head);
+	free(second);
+	free(third);
+	free(ptr);
     return 0;
 }
