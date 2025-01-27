@@ -1,12 +1,10 @@
 #include<stdio.h>
 #include<stdlib.h>
-
 struct Node
 {
     int data;
     struct Node * next;
 };
-
 int main ()
 {
     struct Node * head;
@@ -26,9 +24,14 @@ int main ()
     third->data=8;
     third->next=NULL;
     
-    printf("%d\n",head->data);
-    printf("%d\n",second->data);
-    printf("%d\n",third->data);
-
+	printf("Linked List\n");
+    printf("%d ",head->data);
+    printf("%d ",second->data);
+    printf("%d ",third->data);
+	
+	free(head);
+	free(second);
+	free(third);
+	
     return 0;
 }
