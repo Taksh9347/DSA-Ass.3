@@ -40,11 +40,19 @@ int main ()
     third->data=8;
     third->next=NULL;
     
+	printf("Enter data you want to insert at begining\n");
+	int d;
+	scanf("%d",&d);
+
     printf("List Before insertion\n");
     Print_Linked_List(head);
     printf("After insertion\n");
-    head = insert_begining(head,7);
+    head = insert_begining(head,d);
     Print_Linked_List(head);
+	
+	free(head);
+	free(second);
+	free(third);
 
     return 0;
 }
